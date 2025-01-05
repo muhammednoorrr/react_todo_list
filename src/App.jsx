@@ -68,4 +68,3 @@ function deleteTodo(id){
     </>
   )
 }
-//10:00
