@@ -31,6 +31,12 @@ function toggleTodo(id, completed){
   })
 }
 
+function deleteTodo(id){
+  setTodos(currentTodos => {
+    return currentTodos.filter(todo => todo.id !== id)
+  })
+}
+
   return (
     <>
     <form onSubmit={handleSubmit} className ="new-item-form">
@@ -54,7 +60,7 @@ function toggleTodo(id, completed){
           onChange={e => toggleTodo(todo.id, e.target.checked)} />
           {todo.title}
         </label>
-        <button className="btn btn-danger">Delete</button>
+        <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Delete</button>
       </li>
         )
       })}
