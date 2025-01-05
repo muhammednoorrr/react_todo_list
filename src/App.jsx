@@ -15,6 +15,8 @@ export default function App(){
         false },
       ]
   })
+
+  setNewItem("")
   }
   return (
     <>
